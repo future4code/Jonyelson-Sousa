@@ -1,0 +1,77 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 100%;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-color: #EAEAEA;
+}
+
+#cabecalho {
+    background-color: blue;
+    height: 16vh;   
+}
+
+.item-do-menu{
+    display: inline;
+    padding: 10px;
+}
+
+#menu {
+    padding-top: 10px;
+
+}
+
+a:link {
+    text-decoration: none;
+    font-size: 24px;
+    
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: whitesmoke;
+    background-color:#031038;
+}
+
+a:active {
+    color: tomato;
+}
+
+#banner {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 20px;
+}
+
+#nome-loja {
+    text-align: center;
+    font-size: 70px;
+    font-style: oblique;
+    font-family: cursive;
+    background-color: rgb(141, 140, 140);  
+}
+
+#boas-vindas {
+    text-align: end;
+    font-size: 24px;
+}
+
+.rodape {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 10vh;   
+    background-color: #383838;
+}
