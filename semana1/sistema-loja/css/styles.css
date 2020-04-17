@@ -8,13 +8,9 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-body {
-    background-color: #EAEAEA;
-}
-
 #cabecalho {
-    background-color: blue;
-    height: 16vh;   
+    background-color: #015192;
+    height: 14vh;   
 }
 
 .item-do-menu{
@@ -23,13 +19,14 @@ body {
 }
 
 #menu {
-    padding-top: 10px;
+    padding-top: 6px;
 
 }
 
 a:link {
     text-decoration: none;
-    font-size: 24px;
+    font-size: 1.5em;
+    text-transform: lowercase;
     
 }
 
@@ -43,6 +40,7 @@ a:hover {
     text-decoration: none;
     color: whitesmoke;
     background-color:#031038;
+    border-radius: 8px 8px 0 0;
 }
 
 a:active {
@@ -52,15 +50,12 @@ a:active {
 #banner {
     padding-left: 60px;
     padding-right: 60px;
-    padding-top: 20px;
+    padding-top: 5px;
 }
 
-#nome-loja {
-    text-align: center;
-    font-size: 70px;
-    font-style: oblique;
-    font-family: cursive;
-    background-color: rgb(141, 140, 140);  
+#imagem-banner {
+    width: 100%;
+    height: 40vh;  
 }
 
 #boas-vindas {
