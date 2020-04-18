@@ -1,0 +1,51 @@
+@import './styles.css';
+
+#header-cadastrar-pro {
+    background-color: #015192;
+    text-align: center;
+    color: #ffffff;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.cadastrar{
+    max-width: 500px;
+    margin: 2rem auto;
+    border: 2px solid #015192;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+label{
+    display: block;
+    padding:1rem 0 .25rem;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    border: 2px solid #031038 ;
+    padding: .5rem;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+#botao-cadastrar {
+    border: 0;
+    background: #015192;
+    padding: .5rem;
+    margin: 1rem 0;
+    width: auto;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:.3s background ease;
+    border-radius: 5px;
+}
+
+#botao-cadastrar:hover{
+    background: #031038 ;
+}
+

@@ -1,14 +1,5 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    font-size: 100%;
-    border: none;
-    outline: none;
-    box-sizing: border-box;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-#lis-funci {
+@import './styles.css';
+#header-table {
     background-color: #015192;
     text-align: center;
     color: #ffffff;
@@ -17,9 +8,10 @@
 
 }
 
+
 .content-table {
     border-collapse: collapse;
-    margin:25px 0;
+    margin:20px 0;
     font-size: 1.5em;
     width: 100%;
     min-width:600px; /*manter a tabela sempre bonita*/
@@ -43,8 +35,6 @@
 .content-table tbody tr {
     border-bottom: 1px solid #dddddd;
 }
-/*Colocar fundo diferente para cada segunda linha, comece com o selector para que as linhas tr dentro 
-do corpo da guia aceite*/
 
 .content-table tbody tr:nth-of-type(even) {
     background-color: #b1b1b1;
@@ -54,10 +44,3 @@ do corpo da guia aceite*/
 .content-table tbody tr:last-of-type {
     border-bottom: 2px solid #031038;
 }
-
-
-
-
-
-
-
