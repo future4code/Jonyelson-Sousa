@@ -1,20 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-size: 100%;
     border: none;
     outline: none;
     box-sizing: border-box;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /*font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;*/
 }
 
 body {
-    background-color: #EAEAEA;
+    font: 400 14px Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;/* melhora a visualização*/
+}
+
+input, button, textarea {
+    font: 400 18px Roboto, sans-serif;
+}
+
+button {
+    cursor: pointer;
 }
 
 #cabecalho {
-    background-color: blue;
-    height: 16vh;   
+    background-color: #015192;
+    height: 14vh;   
+}
+
+.pesquisa {
+    position: absolute;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background: #e84118;
+    width: 400px;
+    height: 50px;
+    border-radius: 40px;
+    padding: 8px;  
+    margin-top: 16px;
+}
+
+.search-btn {
+    float: right;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.search-btn :hover{
+    background: #ffffff;
+    font-size: 24px;
+    border-radius: 40%;
+}
+
+.input-txt {
+    float: left;
+    padding: 2%;
+    color: #ffffff;
+    border-radius: 40px;
+    width: 310px;
+    text-align: center;
+
 }
 
 .item-do-menu{
@@ -23,13 +73,14 @@ body {
 }
 
 #menu {
-    padding-top: 10px;
+    padding-top: 6px;
 
 }
 
 a:link {
     text-decoration: none;
-    font-size: 24px;
+    font-size: 1.5em;
+    text-transform: lowercase;
     
 }
 
@@ -41,37 +92,38 @@ a:hover {
     font-size: 24px;
     text-transform: uppercase;
     text-decoration: none;
-    color: whitesmoke;
+    color: #FFFFFF;
     background-color:#031038;
+    border-radius: 8px 8px 0 0;
 }
 
 a:active {
-    color: tomato;
+    color: #e84118;
 }
 
 #banner {
     padding-left: 60px;
     padding-right: 60px;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
-#nome-loja {
-    text-align: center;
-    font-size: 70px;
-    font-style: oblique;
-    font-family: cursive;
-    background-color: rgb(141, 140, 140);  
+#imagem-banner {
+    width: 100%;
+    height: 40vh;  
 }
 
 #boas-vindas {
     text-align: end;
-    font-size: 24px;
+    font-size: 30px;
+    font-style: italic;
 }
 
 .rodape {
     position: absolute;
     bottom: 0%;
     width: 100%;
-    height: 10vh;   
+    height: 20vh;   
+    border-radius: 16px 16px 0 0;
     background-color: #383838;
+    text-align: center;
 }
