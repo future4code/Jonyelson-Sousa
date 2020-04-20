@@ -15,6 +15,9 @@ h2 {
     color: white;
     text-align: center;
 }
+a {
+    text-decoration: none;
+}
 
 input {
     height: 20px;
@@ -38,9 +41,11 @@ div img {
 }
 
 .botao-amarelo {
+    display: block;
     background-color: #ffaf43;
     width: 250px;
     height: 40px;
+    margin: auto;
     border-radius: 5px;
     font-size: 20px;
     color: white;
