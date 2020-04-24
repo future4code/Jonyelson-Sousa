@@ -1,0 +1,113 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 100%;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#cabecalho {
+    position: relative;
+    background-color: #7510F7;
+    margin-top: 0px;
+    height: 14vh;   
+    border-radius: 0px 0px 12px 12px;
+   
+}
+
+#menu-ul {
+    position: absolute;
+    margin-top: 20px;
+    width: 600px;
+    height: 40px;
+    margin:20px auto;
+    background-color: #DD5A00;
+    border-radius:0 8px 8px 8px;
+
+}
+
+.item-do-menu{
+    display: inline;
+    padding: 30px;
+    padding-left: 25px;
+}
+
+a:link {
+    text-decoration: none;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    
+}
+
+a:visited {
+    color: #FFFFFF;
+}
+
+a:hover {
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: #7510F7;
+    border-radius: 0px 0px 8px 8px;
+}
+
+a:active {
+    color: #DD5A00;
+}
+
+#quem-sou-eu {
+    background-color: #2098D1;
+    margin-top: 25px;
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 40vh;   
+    border-radius: 12px 12px 12px 12px;
+}
+
+#tit-quem-sou-eu {
+    color: #FFFFFF;
+    padding-top: 2%;
+    text-align: center;
+    font-size: 4vw;
+}
+
+#meu-paragrafo {
+    color: #FFFFFF;
+    padding-top: 3%;
+    text-align: justify;
+    font-size: 2vw;
+    font-style: italic;
+}
+
+#rodape {
+    width: 100%;
+    background-color: #222222;
+    bottom: 0;
+    height: 30vh;  
+    border-radius: 125px 0px 125px 0px;
+}
+
+/*meus projetos*/
+
+.conteiner-projeto {
+    max-width: 900px;
+    margin: 30px auto;
+    margin-top: 30px;
+}
+
+.meus-projetos {
+    display: inline-block;
+    padding: 20px;
+    
+}
+
+.img-pro {
+    width: 400px;
+    height: 400px;
+    ;
+   
+
+}
