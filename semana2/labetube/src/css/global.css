@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin-top: 0;
+    height: 8vh;
+    background-color: tomato;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    height: 8vh;
+    background-color: rgba(0, 0, 0, 0.897);
+}
+
+footer >p {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}

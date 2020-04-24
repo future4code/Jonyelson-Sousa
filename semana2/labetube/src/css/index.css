@@ -1,0 +1,25 @@
+@import "./global.css";
+
+main {
+    margin-top: 10px;
+    justify-content: center;
+    align-content: center;
+    width: 100vw;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 22vw 22vw 22vw 22vw;
+    grid-template-rows: 15vh 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+main > div {
+    width: 100%;
+    height: 100%;
+    border: 1px solid green;
+}
+
+img {
+    width: 22vw;
+    height: 15vh;
+}
+
