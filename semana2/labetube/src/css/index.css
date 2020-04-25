@@ -1,14 +1,11 @@
 @import "./global.css";
 
 main {
-    margin-top: 10px;
+    margin-top: 5px;
     justify-content: center;
     align-content: center;
-    width: 100vw;
-    height: 60vh;
     display: grid;
     grid-template-columns: 22vw 22vw 22vw 22vw;
-    grid-template-rows: 15vh 1fr 1fr 1fr;
     grid-gap: 10px;
 }
 
@@ -18,8 +15,41 @@ main > div {
     border: 1px solid green;
 }
 
-img {
-    width: 22vw;
-    height: 15vh;
+/* Links do Main */
+
+main div > a {
+    text-decoration: none;
+    color: black;
 }
+
+main div > a:hover {
+    background-color: #EF843A;
+    font-style: italic;
+    font-size: 20px;
+
+}
+
+img {
+    width: 100%;
+    height: 18vh;
+}
+
+/*Responsividade do site*/
+
+@media only screen and (max-width:500px) {
+    main {
+        grid-template-columns: 100%;
+    }
+
+    img {
+        width: 100%;
+        height:50vh;
+    }
+
+    footer {
+        position: relative;
+    }
+   
+}
+
 
