@@ -1,6 +1,6 @@
 // Exercício de intrepretação de código
 
-const respostaDoUsuario = prompt("Digite o número que você quer testar?")
+/*const respostaDoUsuario = prompt("Digite o número que você quer testar?")
 const numero = Number(respostaDoUsuario)
 
 if (numero % 2 === 0) {
@@ -22,7 +22,7 @@ if (numero % 2 === 0) {
 2)O código abaixo foi feito por uma pessoa desenvolvedora, contratada para automatizar algumas tarefas de
 um supermercado. Veja abaixo:*/
 
-let fruta = prompt("Escolha uma fruta")
+/*let fruta = prompt("Escolha uma fruta")
 let preco
 switch (fruta) {
     case "Laranja":
@@ -60,7 +60,7 @@ d. Considere que um usuário queira comprar uma `Pêra`, qual seria a mensagem i
     O preço da fruta  Pêra  é  R$  5.5
   */
 
-const numero1 = prompt("Digite o primeiro número.")
+/*const numero1 = prompt("Digite o primeiro número.")
 const numero2 = prompt("Digite o próximo número?")
 
 if (numero1 > 0 && numero2 > 0) {
@@ -84,11 +84,11 @@ ou seja é uma variavel local e não pode ser acessada no escopo global.*/
 
 /*
 4)Nos exercícios abaixo, será necessário que você trabalhe com a comparação de números. Leia abaixo:
-a. Crie um programa que receba dois números do usuário através do prompt e imprima-os na ordem decrescente. 
+a. Crie um programa que receba dois números do usuário através do prompt e imprima-os na ordem decrescente.
 O que acontece com o seu programa se os 2 números forem iguais? (é só testar e colocar um comentário
 descrevendo o que aconteceu).*/
 
-const numero1 = prompt("Digite o primeiro número.");
+/*const numero1 = prompt("Digite o primeiro número.");
 const numero2 = prompt("Digite o segundo número?");
 if (numero1 > numero2) {
     console.log("Ordem decrescente: ", numero1, numero2);
@@ -98,11 +98,11 @@ if (numero1 > numero2) {
 //Ele cair na condição else e  faz a impressão dos numeros repetidos.
 
 /*
-b. Adapte o programa para que o usuário digite 3 números. Ainda os imprima na ordem **decrescente**. 
-O que acontece como seu programa se os 3 números forem iguais? (é só testar e colocar um comentário 
+b. Adapte o programa para que o usuário digite 3 números. Ainda os imprima na ordem **decrescente**.
+O que acontece como seu programa se os 3 números forem iguais? (é só testar e colocar um comentário
 descrevendo o que aconteceu).*/
 
-const numero1 = prompt("Digite o primeiro número.");
+/*const numero1 = prompt("Digite o primeiro número.");
 const numero2 = prompt("Digite o segundo número?");
 const numero3 = prompt("Digite o terceiro número?");
 if (numero1 > numero2 && numero1 > numero3) {
@@ -130,7 +130,7 @@ if (numero1 > numero2 && numero1 > numero3) {
 /*c. Agora, impeça que o usuário digite 3 números iguais. Caso todos sejam iguais, mostre um aviso ao
  usuário indicando que ele deve, ao menos, inserir um número diferente.*/
 
-const numero1 = prompt("Digite o primeiro número.");
+/*const numero1 = prompt("Digite o primeiro número.");
 const numero2 = prompt("Digite o segundo número?");
 const numero3 = prompt("Digite o terceiro número?");
 if (numero1 == numero2 && numero1 == numero3) {
@@ -155,7 +155,7 @@ if (numero1 == numero2 && numero1 == numero3) {
             console.log("Ordem decrescente: ", numero3, numero2, numero1);
         }
     }
-}
+}*/
 
 
 /*
@@ -168,3 +168,14 @@ penas. Se não possuir, devemos entender uma característica importante: se ele 
 Se não for, diz-se que é um peixe; se  for, ele pode ser um anfíbio ou um réptil. Ele será o primeiro
  (anfíbio), se passar uma parte da vida em ambiente aquático; e será o segundo (réptil), caso contrário.
  */
+
+/*
+a. Escreva o diagrama esquemático que melhor represente a árvore condicional do exercício.
+(Coloque a imagem do esquema no drive e gerem um link de compartilhamento público. Coloque este link num
+comentário durante a resolução deste exercício)
+
+    https://drive.google.com/file/d/1Pxa9ntySSw4TtJW5ZLZ_0b1zQgveZLEB/view?usp=sharing
+
+
+b. Escreva um programa que realize estas perguntas  e indique a classificação final considerada.
+As opções são: ser humano; mamífero não humano; ave; réptil; anfíbio; peixe ou é invertebrado.*/
