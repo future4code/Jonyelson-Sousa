@@ -1,0 +1,55 @@
+@import "./global.css";
+
+main {
+    margin-top: 5px;
+    justify-content: center;
+    align-content: center;
+    display: grid;
+    grid-template-columns: 22vw 22vw 22vw 22vw;
+    grid-gap: 10px;
+}
+
+main > div {
+    width: 100%;
+    height: 100%;
+    border: 1px solid green;
+}
+
+/* Links do Main */
+
+main div > a {
+    text-decoration: none;
+    color: black;
+}
+
+main div > a:hover {
+    background-color: #EF843A;
+    font-style: italic;
+    font-size: 20px;
+
+}
+
+img {
+    width: 100%;
+    height: 18vh;
+}
+
+/*Responsividade do site*/
+
+@media only screen and (max-width:500px) {
+    main {
+        grid-template-columns: 100%;
+    }
+
+    img {
+        width: 100%;
+        height:50vh;
+    }
+
+    footer {
+        position: relative;
+    }
+   
+}
+
+
