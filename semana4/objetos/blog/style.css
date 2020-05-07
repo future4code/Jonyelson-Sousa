@@ -1,0 +1,23 @@
+form {
+   display: grid;
+    background-color: azure;
+    padding: 10px;
+}
+
+#postagens {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    width: 100%;
+    height: 300px;
+    background-color: aquamarine;
+}
+
+#conteudo {
+    height: 100px;
+}
+
+#postagens div {
+    margin: 5px;
+    background-color: chartreuse;
+}
