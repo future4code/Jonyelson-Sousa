@@ -1,42 +1,33 @@
-// objeto para receber os valores do formulario
-
-let informacoesPost = {
-    titulo: '',
-    autor: '',
-    conteudo: ''
-};
-
-// Array para armazenar as postagem
+//array de objetos
 let postagem = [];
 
-function pegarValoresFormulario() {
+// função para receber os valores e adicionar ao array
+function criarPostagem() {
     event.preventDefault();
-    let atualTitulo = document.getElementById("titulo").value;
-    let atualAutor = document.getElementById("autor").value;
-    let atualConteudo = document.getElementById("conteudo").value;
-    informacoesPost.titulo = atualTitulo;
-    informacoesPost.autor = atualAutor;
-    informacoesPost.conteudo = atualConteudo;
-    adicionarPostagem();
-
-};
-
-function adicionarPostagem() {
+    let informacoesPost = {
+        titulo: '',
+        autor: '',
+        conteudo: ''
+    };
+    informacoesPost.titulo = document.getElementById("titulo").value;
+    informacoesPost.autor = document.getElementById("autor").value;
+    informacoesPost.conteudo = document.getElementById("conteudo").value;
     postagem.push(informacoesPost);
+
+    inserirPostagens(informacoesPost);
+
+    console.log(postagem);
     document.getElementById("titulo").value = "";
     document.getElementById("autor").value = "";
     document.getElementById("conteudo").value = "";
+
+
+};
+
+// função para inserir os post no html
+
+function inserirPostagens(informacoesPost) {
+    document.getElementById("postagens").innerHTML += (`<div> <h3>
+    ${informacoesPost.titulo} </h3> <h6> ${informacoesPost.autor} </h6>  <p> ${informacoesPost.conteudo} </p>
+    </div>`);
 }
-
-function mostra() {
-    console.log(postagem);
-}
-
-
-
-
-/*const informacoesPost = {
-    titulo: titulo,
-    autor: autor,
-    conteudo
-}*/
