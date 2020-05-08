@@ -10,7 +10,7 @@ const dadosFomulario = () => {
         valor: '',
         tipoDeDespesa: '',
         descricao: ''
-    }
+    };
 
     despesa.valor = parseInt(document.getElementById("valor").value);
     despesa.tipoDeDespesa = document.getElementById("tipo").value;
@@ -20,6 +20,7 @@ const dadosFomulario = () => {
         alert("Campos vazios não permitidos!")
     } else {
         arrayDespesas.push(despesa);
+        inserirDespesasHtml();
         //Limpar os valores do formulario
         document.getElementById("valor").value = '';
         document.getElementById("descricao").value = '';
@@ -30,19 +31,23 @@ const dadosFomulario = () => {
     console.log(despesa.tipoDeDespesa);
     console.log(despesa.descricao);
     console.log(arrayDespesas);
-
 };
 
-// função filtrar as despesas
-
-const filtrarDespesas = () => {
-    event.preventDefault();
-
+const inserirDespesasHtml = () => {
+    document.getElementById('qualquer-coisa').innerHTML = '';
+    for (let i in arrayDespesas) {
+        document.getElementById('qualquer-coisa').innerHTML += `<li>  
+            ${arrayDespesas[i].valor} 
+            ${arrayDespesas[i].tipoDeDespesa} 
+            ${arrayDespesas[i].descricao} 
+            </li>`;
+    };
 };
 
-// Limpar filtros
+// função para filtrar as despesas
 
-const limparFiltros = () => {
-
-}
+const filtrarDespesas = arrayDespesas.filter((item, index, array) => {
+    console.log('teco');
+})
+event.preventDefault();
 
