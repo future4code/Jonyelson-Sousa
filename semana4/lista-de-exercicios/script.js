@@ -40,6 +40,57 @@ default, logo vai avisar o usuario que o tipo informado é incorreto.
 */
 
 
+// Exercícios de Lógica de Programação
+// 1- Cite 3 maneiras de se percorrer/iterar uma lista. Exercício multiplica os numeros 
+// do array
+/*
+    primeira maneira */
+
+let numeros = [10, 25, 11, 33];
+for (let i = 0; i < numeros.length; i++) {
+    numeros[i] *= 2;
+}
+console.log(numeros);
+/*
+    segunda maneira */
+let numeros2 = [15, 35, 12, 43];
+
+const mutiplicaValoresDoArray = numeros2.map((numero) => {
+    return numero * 2;
+});
+console.log(mutiplicaValoresDoArray);
+
+/*
+    terceira maneira */
+
+numeros2.forEach((numero, index, array) => {
+    array[index] = numero * 2;
+});
+console.log(numeros2);
+
+/*
+
+*/
+
+//2
+/*
+
+*/
+
+//3
+/*
+
+*/
+
+//4
+/*
+
+*/
+
+//5
+/*
+
+*/
 
 
 
