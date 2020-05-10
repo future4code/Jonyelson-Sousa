@@ -41,56 +41,107 @@ default, logo vai avisar o usuario que o tipo informado é incorreto.
 
 
 // Exercícios de Lógica de Programação
+
 // 1- Cite 3 maneiras de se percorrer/iterar uma lista. Exercício multiplica os numeros 
 // do array
 /*
     primeira maneira */
-
+/*
 let numeros = [10, 25, 11, 33];
 for (let i = 0; i < numeros.length; i++) {
     numeros[i] *= 2;
 }
-console.log(numeros);
+console.log(numeros);*/
 /*
     segunda maneira */
-let numeros2 = [15, 35, 12, 43];
+/*let numeros2 = [15, 35, 12, 43];
 
 const mutiplicaValoresDoArray = numeros2.map((numero) => {
     return numero * 2;
 });
-console.log(mutiplicaValoresDoArray);
+console.log(mutiplicaValoresDoArray);*/
 
 /*
     terceira maneira */
 
-numeros2.forEach((numero, index, array) => {
+/*numeros2.forEach((numero, index, array) => {
     array[index] = numero * 2;
 });
-console.log(numeros2);
-
-/*
-
-*/
+console.log(numeros2);*/
 
 //2
 /*
-
+letra-a) false;
+letra-b) false;
+letra-c) true;
+letra-d) true;
+letra-e) true;
 */
 
 //3
-/*
 
-*/
+/*const quantidadeDeNumerosPares = prompt("Digite um numero:")
+let i = 0
+while (i < quantidadeDeNumerosPares) {
+    console.log(i * 2);
+    i++
+}*/
+/* o código estava faltando receber o numero do usuario, a condição estava errada e
+o loop estava sem incremento.*/
+
 
 //4
-/*
 
-*/
+/*const classificaTriangulo = (ladoA, ladoB, ladoC) => {
+    if (ladoA == ladoB && ladoA == ladoC) {
+        return console.log('Equilátero');
+    } else if ((ladoA == ladoB) || (ladoA == ladoC) || (ladoB == ladoC)) {
+        return console.log('Isósceles');
+    }
+    return console.log('Escaleno');
+};
 
-//5
-/*
+classificaTriangulo(8, 8, 8);*/
 
-*/
+//5 Tentei aõ maximo deixa o algoritmo sem furo!!
 
+function receberDois(numeroA, numeroB) {
 
+    if (numeroA > numeroB) {
+        console.log('O maior é:', numeroA);
+        if (numeroA % numeroB == 0) {
+            console.log(numeroA, 'é divisível por', numeroB);
+            console.log(numeroB, 'não é divisível por', numeroA);
+            numeroA -= numeroB;
+            console.log('A diferença entre eles é ', numeroA);
+        } else {
+            console.log(numeroA, 'não é divisivel por', numeroB);
+            console.log(numeroB, 'não é divisível por', numeroA);
+            numeroA -= numeroB;
+            console.log('A diferença entre eles é ', numeroA);
+        }
 
+    } else if (numeroA == numeroB) {
+        console.log('Os numeros são iguais logo não ha diferenças!');
+        if (numeroA == 0) {
+            console.log('Sem pegadinhas zero é zero :)');
+        } else {
+            console.log(numeroB, 'é divisível por', numeroA);
+        }
+    } else {
+        console.log('else');
+        console.log('O maior é:', numeroB);
+        if (numeroB % numeroA == 0) {
+            console.log(numeroA, 'não é divisível por', numeroB);
+            console.log(numeroB, 'é divisível por', numeroA);
+            numeroB -= numeroA;
+            console.log('A diferença entre eles é ', numeroB);
+        } else {
+            console.log(numeroA, 'não é divisivel por', numeroB);
+            console.log(numeroB, 'não é divisível por', numeroA);
+            numeroB -= numeroA;
+            console.log('A diferença entre eles é ', numeroA);
+        }
+    }
+};
+receberDois(673, 6);
