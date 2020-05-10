@@ -105,7 +105,7 @@ classificaTriangulo(8, 8, 8);*/
 
 //5 Tentei aõ maximo deixa o algoritmo sem furo!!
 
-function receberDois(numeroA, numeroB) {
+/*function receberDois(numeroA, numeroB) {
 
     if (numeroA > numeroB) {
         console.log('O maior é:', numeroA);
@@ -144,4 +144,30 @@ function receberDois(numeroA, numeroB) {
         }
     }
 };
-receberDois(673, 6);
+receberDois(673, 6);*/
+
+
+// Exercícios de Funções
+
+//1
+
+const arrayDeNumeros = [5, 3, 7, 8];
+
+function verificaSegundoNumeroMaiorEMenor(array) {
+    array.sort();
+    console.log(array);
+    let segundoMenorValor = array[1];
+    console.log('Segundo menor numero: ', segundoMenorValor);
+    let segundoMaiorValor = array[array.length - 2];
+    console.log('Sengundo Maior valor: ', segundoMaiorValor);
+
+};
+verificaSegundoNumeroMaiorEMenor(arrayDeNumeros);
+/* OBS: a função esta com furo pois estou pegando o segundo elemento e o penultimo,
+se o primeiro elemento ou o ultimo forem valores duplicados então o a logica se contra
+diz. porém tentei solucionar mais não tive exeto. */
+
+//2
+
+const alertLabenu = () => alert('Hello Labenu!');
+alertLabenu();
