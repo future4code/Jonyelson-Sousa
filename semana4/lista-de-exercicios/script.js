@@ -171,3 +171,66 @@ diz. porém tentei solucionar mais não tive exeto. */
 
 const alertLabenu = () => alert('Hello Labenu!');
 alertLabenu();
+
+
+// Exercícios de Objetos
+
+//1
+/*
+    array serve para armazenarmos um conjunto de itens ou objetos e acessarmos pelo
+mesmo nome, muito bom quando temos uma lista. Objeto é muito importante para representarmos
+objetos reais no algoritmo pois podemos guardar suas propriedades e ações. a grade
+diferência entre eles é que o array é uma listagem numerada e o objeto uma listagem
+nomeada.
+*/
+
+//2
+
+function criaRetangulo(lado1, lado2) {
+    return retangulo = {
+        lagura: lado1,
+        altura: lado2,
+        perimetro: (2 * (lado1 * lado2)),
+        area: (lado1 * lado2),
+    };
+};
+
+//3
+
+/*const meuFilmeFavorito = {
+    titulo: '2 Fast 2 Furios',
+    ano: 2003,
+    diretor: 'Jonh Singleton',
+    atores: ['Paul Walker', 'Tyrese Gilbson'],
+    atrizes: ['Eva Mendes', 'Devon Aoki'],
+
+    detalhesDoFilme: function () {
+        console.log(`Venha assistir ao filme ${meuFilmeFavorito.titulo}, do ano ${meuFilmeFavorito.ano}, dirigido por ${meuFilmeFavorito.diretor} e estrelado por ${meuFilmeFavorito.atores}, ${meuFilmeFavorito.atrizes}.`);
+    }
+
+
+}
+
+meuFilmeFavorito.detalhesDoFilme();*/
+
+//4
+
+const pessoa = {
+    nome: 'jonyelson',
+    idade: '27',
+    email: 'jl@kkk.com',
+    enderenco: ' São luís',
+};
+
+
+let anonomizarPessoa = (objeto) => {
+    const pessoaAnonima = {
+        ...objeto,
+        nome: 'anonima'
+    }
+    return pessoaAnonima;
+
+};
+console.log(anonomizarPessoa(pessoa));
+console.log(pessoa);
+
