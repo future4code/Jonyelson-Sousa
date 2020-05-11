@@ -46,28 +46,29 @@ default, logo vai avisar o usuario que o tipo informado é incorreto.
 // do array
 /*
     primeira maneira */
-/*
+
 let numeros = [10, 25, 11, 33];
 for (let i = 0; i < numeros.length; i++) {
     numeros[i] *= 2;
 }
-console.log(numeros);*/
+console.log(numeros);
+
 /*
     segunda maneira */
-/*let numeros2 = [15, 35, 12, 43];
+let numeros2 = [15, 35, 12, 43];
 
 const mutiplicaValoresDoArray = numeros2.map((numero) => {
     return numero * 2;
 });
-console.log(mutiplicaValoresDoArray);*/
+console.log(mutiplicaValoresDoArray);
 
 /*
     terceira maneira */
 
-/*numeros2.forEach((numero, index, array) => {
+numeros2.forEach((numero, index, array) => {
     array[index] = numero * 2;
 });
-console.log(numeros2);*/
+console.log(numeros2);
 
 //2
 /*
@@ -80,19 +81,19 @@ letra-e) true;
 
 //3
 
-/*const quantidadeDeNumerosPares = prompt("Digite um numero:")
+const quantidadeDeNumerosPares = prompt("Digite um numero:")
 let i = 0
 while (i < quantidadeDeNumerosPares) {
     console.log(i * 2);
     i++
-}*/
+}
 /* o código estava faltando receber o numero do usuario, a condição estava errada e
 o loop estava sem incremento.*/
 
 
 //4
 
-/*const classificaTriangulo = (ladoA, ladoB, ladoC) => {
+const classificaTriangulo = (ladoA, ladoB, ladoC) => {
     if (ladoA == ladoB && ladoA == ladoC) {
         return console.log('Equilátero');
     } else if ((ladoA == ladoB) || (ladoA == ladoC) || (ladoB == ladoC)) {
@@ -101,11 +102,13 @@ o loop estava sem incremento.*/
     return console.log('Escaleno');
 };
 
-classificaTriangulo(8, 8, 8);*/
+classificaTriangulo(8, 8, 8);
+
 
 //5 Tentei aõ maximo deixa o algoritmo sem furo!!
 
-/*function receberDois(numeroA, numeroB) {
+
+function receberDois(numeroA, numeroB) {
 
     if (numeroA > numeroB) {
         console.log('O maior é:', numeroA);
@@ -144,7 +147,7 @@ classificaTriangulo(8, 8, 8);*/
         }
     }
 };
-receberDois(673, 6);*/
+receberDois(673, 6);
 
 
 // Exercícios de Funções
@@ -197,7 +200,7 @@ function criaRetangulo(lado1, lado2) {
 
 //3
 
-/*const meuFilmeFavorito = {
+const meuFilmeFavorito = {
     titulo: '2 Fast 2 Furios',
     ano: 2003,
     diretor: 'Jonh Singleton',
@@ -207,11 +210,10 @@ function criaRetangulo(lado1, lado2) {
     detalhesDoFilme: function () {
         console.log(`Venha assistir ao filme ${meuFilmeFavorito.titulo}, do ano ${meuFilmeFavorito.ano}, dirigido por ${meuFilmeFavorito.diretor} e estrelado por ${meuFilmeFavorito.atores}, ${meuFilmeFavorito.atrizes}.`);
     }
-
-
 }
 
-meuFilmeFavorito.detalhesDoFilme();*/
+meuFilmeFavorito.detalhesDoFilme();
+
 
 //4
 
@@ -221,7 +223,6 @@ const pessoa = {
     email: 'jl@kkk.com',
     enderenco: ' São luís',
 };
-
 
 let anonomizarPessoa = (objeto) => {
     const pessoaAnonima = {
@@ -233,4 +234,102 @@ let anonomizarPessoa = (objeto) => {
 };
 console.log(anonomizarPessoa(pessoa));
 console.log(pessoa);
+
+
+// Exercícios de Funções de array
+
+//1-letra-A
+
+const array = [
+    { nome: "Pedro", idade: 20 },
+    { nome: "João", idade: 10 },
+    { nome: "Paula", idade: 12 },
+    { nome: "Artur", idade: 89 }
+];
+
+const adultosComIdadeIgualOuMaiorQue20 = array.filter((pessoas) => {
+    if (pessoas.idade >= 20) {
+        return true;
+    } else {
+        return false;
+    }
+
+});
+
+console.log(adultosComIdadeIgualOuMaiorQue20);
+
+//1-letra-B
+
+const pessoasMenorQue20Anos = array.filter((pessoas) => {
+    if (pessoas.idade < 20) {
+        return true;
+    } else {
+        return false;
+    }
+
+});
+
+console.log(pessoasMenorQue20Anos);
+
+//2 - letra-A
+
+const arrayParaExercicio2 = [1, 2, 3, 4, 5, 6];
+
+let multiplica = item => item * 2;
+
+const dobrados = arrayParaExercicio2.map(multiplica);
+console.log(dobrados);
+
+
+//2 - letra-B
+
+let multiplicaPor3 = item => item * 3;
+
+const triplicados = arrayParaExercicio2.map(multiplicaPor3);
+
+console.log(triplicados);
+
+
+//3-letra-A
+
+const pessoas = [
+    { nome: "Paula", idade: 12, altura: 1.8 },
+    { nome: "João", idade: 20, altura: 1.3 },
+    { nome: "Pedro", idade: 15, altura: 1.9 },
+    { nome: "Luciano", idade: 22, altura: 1.8 },
+    { nome: "Artur", idade: 10, altura: 1.2 },
+    { nome: "Soter", idade: 70, altura: 1.9 }
+];
+
+const podemBrincar = function (item) {
+    if (item.altura >= 1.5 && (item.idade > 14 && item.idade < 60)) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
+let apitosParaBrincar = pessoas.filter(podemBrincar);
+
+console.log(apitosParaBrincar);
+
+
+//3-letra-B
+
+const naoPodemBrincar = function (item) {
+    if (item.altura >= 1.5 && (item.idade > 14 && item.idade < 60)) {
+        return false;
+    } else {
+        return true;
+    }
+};
+
+let proibidosDeBrincar = pessoas.filter(naoPodemBrincar);
+
+console.log(proibidosDeBrincar);
+
+
+
+
+
 
