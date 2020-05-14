@@ -4,12 +4,15 @@ import './Post.css';//código css
 //<import de componentes>
 import { SecaoComentario } from '../SecaoComentario/SecaoComentario';
 import { IconeComContador } from '../IconeComContador/IconeComContador';
+import { IconeMarcaPaginas } from '../IconeMarcaPaginas/IconeMarcaPaginas';
 //<Fim dos import de componentes>
 
 //<import de icones>
 import iconeCoracaoBranco from '../../img/favorite-white.svg'
 import iconeCoracaoPreto from '../../img/favorite.svg'
 import iconeComentario from '../../img/comment_icon.svg'
+import iconeMarcaPaginasBranco from '../../img/bookmark_border-24px.svg'
+import iconeMarcaPaginasPreto from '../../img/bookmark-24px.svg'
 //< Fim import de icones>
 
 class Post extends React.Component {//Classe Post herda de React.Component
@@ -17,26 +20,40 @@ class Post extends React.Component {//Classe Post herda de React.Component
     curtido: false,
     numeroCurtidas: 0,
     comentando: false,
-    numeroComentarios: 0
+    numeroComentarios: 0,
+    marcaPaginas: false
   }
 
   onClickCurtida = () => {
     console.log('Curtiu!')
-    this.setState({
-      curtido: !this.state.curtido,
-      numeroCurtidas: this.state.numeroCurtidas + 1
-    })
+    if (this.state.curtido) {
+      this.setState({
+        curtido: !this.state.curtido,
+        numeroCurtidas: this.state.numeroCurtidas - 1
+      })
+    } else {
+      this.setState({
+        curtido: !this.state.curtido,
+        numeroCurtidas: this.state.numeroCurtidas + 1
+      })
+    }
+  };
 
+  onClickMarcaPaginas = () => {
+    this.setState({
+      marcaPaginas: !this.state.marcaPaginas
+    })
 
   }
 
   onClickComentario = () => {
     this.setState({
-      comentando: !this.state.comentando/* Duvida sanada?  */
+      comentando: !this.state.comentando
     })
   }
 
   aoEnviarComentario = () => {
+    console.log('teco');
     this.setState({
       comentando: false,
       numeroComentarios: this.state.numeroComentarios + 1
@@ -50,6 +67,14 @@ class Post extends React.Component {//Classe Post herda de React.Component
       iconeCurtida = iconeCoracaoPreto
     } else {// vai iniciar a aplicação com o icone na cor branca
       iconeCurtida = iconeCoracaoBranco
+    };
+
+    let iconePaginas;
+
+    if (this.state.marcaPaginas) {
+      iconePaginas = iconeMarcaPaginasPreto;
+    } else {// vai iniciar a aplicação com o icone na cor branca
+      iconePaginas = iconeMarcaPaginasBranco;
     };
 
     let componenteComentario;
@@ -73,6 +98,11 @@ class Post extends React.Component {//Classe Post herda de React.Component
           valorContador={this.state.numeroCurtidas}
         />
 
+        <IconeMarcaPaginas
+          icone={iconePaginas}
+          onClickMarcaPaginas={this.onClickMarcaPaginas}
+        />
+
         <IconeComContador
           icone={iconeComentario}
           onClickIcone={this.onClickComentario}
@@ -84,4 +114,4 @@ class Post extends React.Component {//Classe Post herda de React.Component
   }
 }
 
-export default Post;//Poderia esta no inicio da função?
+export default Post;
