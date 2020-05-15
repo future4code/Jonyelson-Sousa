@@ -53,7 +53,6 @@ class Post extends React.Component {//Classe Post herda de React.Component
   }
 
   aoEnviarComentario = () => {
-    console.log('teco');
     this.setState({
       comentando: false,
       numeroComentarios: this.state.numeroComentarios + 1
@@ -83,7 +82,7 @@ class Post extends React.Component {//Classe Post herda de React.Component
       componenteComentario = <SecaoComentario aoEnviar={this.aoEnviarComentario} />
     }
 
-    return <div className={'post-container'}>
+    return (<div className={'post-container'}>
       <div className={'post-header'}>
         <img className={'user-photo'} src={this.props.fotoUsuario} alt={'Imagem do usuario'} />
         <p>{this.props.nomeUsuario}</p>
@@ -111,6 +110,7 @@ class Post extends React.Component {//Classe Post herda de React.Component
       </div>
       {componenteComentario}
     </div>
+    )
   }
 }
 
