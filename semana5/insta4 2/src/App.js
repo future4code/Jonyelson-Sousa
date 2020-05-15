@@ -1,6 +1,17 @@
 import React from 'react';
 import './App.css';
 import Post from './components/Post/Post';
+import styled from 'styled-components'
+
+// estilização dos componentes
+
+const CriarPost = styled.div`
+background-color: #BDBDBD;
+margin: 10px;
+height: 30vh;
+display: flex;
+flex-direction: column;
+`
 
 class App extends React.Component {
 
@@ -30,7 +41,6 @@ class App extends React.Component {
     ]
   };
 
-
   render() {
 
     const listaComponentesPosts = this.state.posts.map((post) => {
@@ -43,10 +53,17 @@ class App extends React.Component {
       );
     });
 
-
     return (
-      <div className={'post-container'}>
-        {listaComponentesPosts}
+      <div>
+        <CriarPost>
+          <input placeholder="Nome do Usuario"></input>
+          <input placeholder="Foto do Usuario"></input>
+          <input placeholder="Foto do Post"></input>
+          <button>Postar</button>
+        </CriarPost>
+        <div className={'post-container'}>
+          {listaComponentesPosts}
+        </div>
       </div>
     );
   }
