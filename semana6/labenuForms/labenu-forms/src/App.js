@@ -1,8 +1,7 @@
 import React from 'react';
-import FormPart1 from './components/FormPart1';
+import FormPart1 from './components/FormPart1/FormPart1';
 import FormPart2 from './components/FormPart2';
 import FormPart3 from './components/FormPart3';
-import FormConclusion from './components/FormConclusion';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -25,9 +24,9 @@ class App extends React.Component {
   }
 
   botaoForm = () => {
-    return (this.state.form <= 3 ? <button onClick={this.proximoForm}>Próxima etapa</button> : <p></p>)
-
+    return (this.state.form <= 3 ? <button onClick={this.proximoForm}>Próxima etapa</button> : false)
   }
+
 
   render() {
 
