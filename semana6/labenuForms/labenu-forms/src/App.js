@@ -17,10 +17,23 @@ class App extends React.Component {
 
   state = {
     form: 1
+
   }
 
   proximoForm = () => {
-    this.setState({ form: this.state.form + 1 })
+
+    var Escoladade = 1
+
+    if (this.state.form === 1) {
+
+      if (document.getElementsByTagName("select")[0].value === "Ensino Médio Incompleto" || "Ensino Médio Completo") Escoladade = 2
+
+    }
+
+    this.setState(
+      { form: this.state.form + Escoladade })
+
+
   }
 
   botaoForm = () => {
