@@ -46,16 +46,25 @@ class App extends React.Component {
   };
 
   criaTarefa = () => {
+    const novaTarefa = {
+      id: Date.now(),
+      texto: this.state.inputValue,
+      completa: this.state.filter === 'completas' ? true : false
+    };
 
+    const novasTarefas = [novaTarefa, ...this.state.tarefas]
 
-  }
+    this.setState({ tarefas: novasTarefas })
+    this.setState({ inputValue: '' })
+    console.log(this.state.tarefas);
+  };
 
   selectTarefa = (id) => {
 
   }
 
   onChangeFilter = (event) => {
-
+    this.setState({ filter: event.target.value })
   }
 
   render() {
