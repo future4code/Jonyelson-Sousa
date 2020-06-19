@@ -6,7 +6,7 @@ function Layout() {
   return (
     <Grid>
       <Header>
-        <p>Sou o cabeçalho</p>
+        <h1>AstroMatch</h1>
       </Header>
       <Main>
         <p>teco</p>
