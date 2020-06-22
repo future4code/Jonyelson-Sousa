@@ -1,29 +1,35 @@
 import styled from "styled-components";
 
-export const Grid = styled.div`
+export const FlexContainer = styled.div`
   display: flex;
-  width: 500px;
-  height: 100%;
-  border: 1px solid black;
+  width: 400px;
+  height: 96%;
+  border: 2px solid #010400;
+  border-radius: 15px;
+  margin: 2px;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  background-color: #f0d3f7;
 `;
 
 export const Header = styled.header`
   height: 50px;
   width: 100%;
-  background-color: red;
 `;
 
 export const Main = styled.main`
-  height: 50px;
+  height: 400px;
   width: 100%;
-  background-color: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Footer = styled.footer`
+  display: flex;
+  justify-content: space-around;
   width: 100%;
-  height: 50px;
-  background-color: blue;
+  height: 10vh;
 `;

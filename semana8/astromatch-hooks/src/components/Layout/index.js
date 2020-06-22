@@ -1,20 +1,22 @@
 import React from "react";
+import ProfileChoose from "../ProfileChoose";
+import ChoosePerson from "../ChoosePerson";
 
-import { Grid, Header, Footer, Main } from "./styles";
+import { FlexContainer, Header, Footer, Main } from "./styles";
 
 function Layout() {
   return (
-    <Grid>
+    <FlexContainer>
       <Header>
         <h1>AstroMatch</h1>
       </Header>
       <Main>
-        <p>teco</p>
+        <ProfileChoose />
       </Main>
       <Footer>
-        <p>Sou o rodapé</p>
+        <ChoosePerson />
       </Footer>
-    </Grid>
+    </FlexContainer>
   );
 }
 
