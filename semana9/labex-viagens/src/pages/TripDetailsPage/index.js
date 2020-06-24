@@ -1,7 +1,7 @@
 import React from "react";
 
 const Page = () => {
-  return <div>Página de Login Teco</div>;
+  return <div>Detalhes</div>;
 };
 
 export default Page;
