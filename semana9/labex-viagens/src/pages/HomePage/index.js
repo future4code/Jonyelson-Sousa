@@ -1,21 +1,32 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import Header from "../../components/Header";
+import axios from "axios";
 
 const Page = () => {
-  const history = useHistory();
+  const [trips, setTrips] = useState([{}]);
 
-  const goToLoginPage = () => {
-    history.push("/login");
-  };
+  useEffect(() => {
+    axios
+      .get(
+        "https://us-central1-labenu-apis.cloudfunctions.net/labeX/jonyelson-mello/trips"
+      )
+      .then((response) => {
+        setTrips(response.data.trips);
+        console.log(response.data.trips);
+      });
+  }, []);
 
-  const goToListTripsPage = () => {
-    history.push("/trips/list");
-  };
   return (
     <>
+      <Header />
       <div>Página Home</div>
-      <button onClick={goToLoginPage}>Ir para pagina de login</button>
-      <button onClick={goToListTripsPage}>Listar Viagens</button>
+      {trips.map((trip) => {
+        return (
+          <div>
+            <p>{trip.description}</p>
+          </div>
+        );
+      })}
     </>
   );
 };

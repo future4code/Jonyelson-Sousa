@@ -1,6 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import { Input } from "@material-ui/core";
+import AccountCircle from "@material-ui/icons/AccountCircle";
+import HttpsIcon from "@material-ui/icons/Https";
+import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import InputAdornment from "@material-ui/core/InputAdornment";
+import { FormControl } from "@material-ui/core";
 import axios from "axios";
+import Header from "../../components/Header";
+import {
+  MyButton,
+  MyTextField,
+  ContainerForm,
+  ContainerMain,
+} from "../../AppStyled";
 
 const baseUrl =
   "https://us-central1-labenu-apis.cloudfunctions.net/labeX/jonyelson-mello";
@@ -41,25 +54,56 @@ const Page = () => {
   };
   return (
     <>
-      <label>
-        Email:
-        <input
-          value={email}
-          onChange={(event) => {
-            setEmail(event.target.value);
-          }}
-        ></input>
-      </label>
-      <label>
-        Senha:
-        <input
-          value={password}
-          onChange={(event) => {
-            setPassword(event.target.value);
-          }}
-        ></input>
-      </label>
-      <button onClick={login}>Fazer Login!</button>
+      <Header />
+      <ContainerMain>
+        <ContainerForm color="secondary">
+          <FormControl margin="dense">
+            <MyTextField
+              required="true"
+              variant="standard"
+              label="Usuário"
+              value={email}
+              onChange={(event) => {
+                setEmail(event.target.value);
+              }}
+              margin="normal"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <AccountCircle />
+                  </InputAdornment>
+                ),
+              }}
+            />
+            <MyTextField
+              variant="standard"
+              label="Senha"
+              required="true"
+              value={password}
+              onChange={(event) => {
+                setPassword(event.target.value);
+              }}
+              margin="normal"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <HttpsIcon />
+                  </InputAdornment>
+                ),
+              }}
+            />
+            <MyButton
+              variant="contained"
+              color="primary"
+              size="medium"
+              onClick={login}
+              endIcon={<CheckCircleIcon> Quero Entrar</CheckCircleIcon>}
+            >
+              Quero Entrar
+            </MyButton>
+          </FormControl>
+        </ContainerForm>
+      </ContainerMain>
     </>
   );
 };
